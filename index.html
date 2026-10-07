@@ -975,6 +975,43 @@ main .off-table td{border-top-color:var(--line)}
   text-transform:uppercase;color:var(--muted);padding:0 0 6px}
 .tm-periods td{padding:6px 0;border-top:1px solid var(--line)}
 .tm-periods .num{text-align:right;font-variant-numeric:tabular-nums}
+
+/* ---- team logos: the same visible size for every team ----------------
+   NHL's logo files share one 960x640 frame but the artwork inside varies
+   (Rangers small, Kings wide), so each is scaled to the same visible size
+   and centred. The box (and the layout) doesn't change. */
+img[src*="/ANA_"]{transform:scale(1.095) translate(0.0%,0.1%)}
+img[src*="/BOS_"]{transform:scale(1.083) translate(0.1%,0.1%)}
+img[src*="/BUF_"]{transform:scale(1.079) translate(0.0%,0.0%)}
+img[src*="/CAR_"]{transform:scale(1.015) translate(0.1%,0.0%)}
+img[src*="/CBJ_"]{transform:scale(1.044) translate(0.0%,0.1%)}
+img[src*="/CGY_"]{transform:scale(1.141) translate(0.0%,0.1%)}
+img[src*="/CHI_"]{transform:scale(1.101) translate(0.0%,0.1%)}
+img[src*="/COL_"]{transform:scale(1.115) translate(0.0%,0.1%)}
+img[src*="/DAL_"]{transform:scale(0.950) translate(0.1%,0.1%)}
+img[src*="/DET_"]{transform:scale(0.954) translate(0.0%,0.0%)}
+img[src*="/EDM_"]{transform:scale(1.068) translate(0.1%,0.1%)}
+img[src*="/FLA_"]{transform:scale(1.156) translate(0.0%,0.1%)}
+img[src*="/LAK_"]{transform:scale(0.927) translate(0.0%,0.1%)}
+img[src*="/MIN_"]{transform:scale(0.999) translate(0.1%,0.1%)}
+img[src*="/MTL_"]{transform:scale(1.002) translate(0.0%,0.0%)}
+img[src*="/NJD_"]{transform:scale(1.143) translate(0.0%,0.0%)}
+img[src*="/NSH_"]{transform:scale(1.097) translate(0.1%,0.1%)}
+img[src*="/NYI_"]{transform:scale(1.151) translate(0.1%,0.0%)}
+img[src*="/NYR_"]{transform:scale(1.226) translate(0.1%,0.0%)}
+img[src*="/OTT_"]{transform:scale(0.966) translate(0.0%,0.0%)}
+img[src*="/PHI_"]{transform:scale(1.154) translate(0.1%,0.0%)}
+img[src*="/PIT_"]{transform:scale(1.096) translate(0.1%,0.0%)}
+img[src*="/SEA_"]{transform:scale(1.196) translate(0.1%,0.1%)}
+img[src*="/SJS_"]{transform:scale(0.985) translate(0.0%,0.0%)}
+img[src*="/STL_"]{transform:scale(1.155) translate(0.1%,0.1%)}
+img[src*="/TBL_"]{transform:scale(1.075) translate(0.0%,0.1%)}
+img[src*="/TOR_"]{transform:scale(1.078) translate(0.0%,0.0%)}
+img[src*="/UTA_"]{transform:scale(0.939) translate(0.0%,0.1%)}
+img[src*="/VAN_"]{transform:scale(1.063) translate(0.0%,0.1%)}
+img[src*="/VGK_"]{transform:scale(1.174) translate(0.1%,0.1%)}
+img[src*="/WPG_"]{transform:scale(1.049) translate(0.0%,0.0%)}
+img[src*="/WSH_"]{transform:scale(0.937) translate(0.0%,0.1%)}
 </style><script>// Puckline Press: tabs, section switch, sortable tables, team logos.
 document.documentElement.classList.add('js');
 
