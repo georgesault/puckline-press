@@ -1010,6 +1010,41 @@ img[src*="/VAN_"]{transform:scale(1.063) translate(0.0%,0.1%)}
 img[src*="/VGK_"]{transform:scale(1.174) translate(0.1%,0.1%)}
 img[src*="/WPG_"]{transform:scale(1.049) translate(0.0%,0.0%)}
 img[src*="/WSH_"]{transform:scale(0.937) translate(0.0%,0.1%)}
+
+/* ---- game page: tale of the tape (away · stat · home, split bars) ----- */
+.tt{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 18px 10px}
+.tt-head{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;
+  gap:12px;padding:10px 0 12px;border-bottom:1px solid var(--line)}
+.tt-team{display:flex;align-items:center;gap:10px}
+.tt-team.b{flex-direction:row-reverse;text-align:right}
+.tt-team .tl img{width:44px;height:44px;display:block}
+.tt-team b{display:block;font:700 22px/1 var(--display);letter-spacing:.02em}
+.tt-team small{display:block;margin-top:3px;font:600 11px var(--text);letter-spacing:.08em;
+  text-transform:uppercase;color:var(--muted)}
+.tt-vs{font:700 13px var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.tt-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(150px,auto) minmax(0,1fr);
+  gap:4px 14px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line);
+  font-size:14px;font-variant-numeric:tabular-nums}
+.tt-row:last-child{border-bottom:0}
+.tt-a{text-align:left}.tt-b{text-align:right}
+.tt-a b,.tt-b b{font-weight:700;color:var(--ink)}
+.tt-k{text-align:center;font:700 12px var(--display);letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted)}
+.tt-bar{grid-column:1/-1;display:flex;gap:3px;height:6px}
+.tt-bar span{display:block;height:100%;border-radius:3px;background:var(--line)}
+.tt-bar.lead-a span:first-child,.tt-bar.lead-b span:last-child{background:var(--gold)}
+.tt-tag{display:inline-block;margin-left:6px;padding:1px 6px;border-radius:5px;font:700 10px var(--text);
+  letter-spacing:.06em;text-transform:uppercase;background:var(--soft);border:1px solid var(--line);
+  color:var(--muted);vertical-align:1px}
+.tt-wl{display:inline-block;min-width:22px;margin:0 2px;padding:1px 4px;border-radius:5px;
+  text-align:center;font:700 12px var(--text);color:#fff}
+.tt-wl.w{background:var(--win)}.tt-wl.l{background:var(--accent)}.tt-wl.otl{background:#B7791F}
+@media (max-width:600px){
+  .tt{padding:4px 12px 8px}
+  .tt-row{grid-template-columns:minmax(0,1fr) 92px minmax(0,1fr);gap:4px 8px;font-size:13px}
+  .tt-k{font-size:10.5px;letter-spacing:.04em;line-height:1.25}
+  .tt-team .tl img{width:34px;height:34px}.tt-team b{font-size:18px}
+}
 </style></head><body>
 <header class="site-header"><div class="wrap bar"><a class="brand" href="../">
 <span class="brand-text"><span class='wordmark'>Puckline <b>Press</b></span>
