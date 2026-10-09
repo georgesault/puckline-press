@@ -140,6 +140,16 @@ a{color:var(--link)}
 .hl-more .tl img{width:22px;height:22px;display:block}
 .hl-more span{margin-left:auto;color:#8FA3BC}
 .hl-more:hover{color:#fff}
+.hl-score{min-width:44px;text-align:center}
+.hl-live .hl-score{background:rgba(200,16,46,.22)}
+.hl-team.lost{opacity:.55}
+.hl-team.won .hl-score{background:rgba(255,255,255,.18)}
+.hl-livetag{display:inline-block;font:700 11px var(--display);letter-spacing:.12em;
+  text-transform:uppercase;color:#fff;background:var(--red);padding:2px 7px;border-radius:5px;
+  margin-right:4px;animation:hlpulse 2s ease-in-out infinite}
+@keyframes hlpulse{50%{opacity:.6}}
+@media (prefers-reduced-motion:reduce){.hl-livetag{animation:none}}
+.hl-more span.hl-row-live{color:#FF6B82;font-weight:700}
 .hl-extra{display:block;font-size:12.5px;color:#8FA3BC;padding-top:4px}
 .hero-logo{width:260px;height:auto;filter:drop-shadow(0 12px 30px rgba(0,0,0,.45))}
 
