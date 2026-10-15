@@ -1280,6 +1280,28 @@ a.card:hover{border-color:var(--link)}
 .card .l.long{font-size:14px;letter-spacing:0}
 .card .l.xlong{font-size:12.5px;letter-spacing:0}
 .lc-key{margin:4px 0 10px;font-size:13px;color:var(--muted)}
+
+/* ---- phones: a compact recap score banner --------------------------- */
+/* Like the game banner: logo, abbreviation, record and shots over each
+   score, Final between them, then the goals by period. */
+@media (max-width:860px){
+  .score-hero.sh5{padding:16px 12px;gap:8px 10px}
+  .sh5 .sh-team,.sh5 .sh-team.home{gap:4px}
+  .sh5 .tl.big img{width:48px;height:48px}
+  .sh5 .mh-city{display:none}
+  .sh5 .mh-abbr{display:block;font:700 24px/1 var(--display);letter-spacing:.04em}
+  .sh5 .sh-rec,.sh5 .sh-shots{font-size:12px;margin-top:2px;white-space:nowrap}
+  .sh5 .sh-score{font-size:48px}
+  .sh5 .sh-final{font-size:15px;padding:4px 10px}
+  .sh5 .mh-venue{font-size:11px;letter-spacing:.04em;max-width:14ch}
+}
+
+/* ---- News: notes added after a story was posted --------------------- */
+.nw-upd{margin:10px 0 0;padding:8px 12px;border-radius:8px;font-size:14px;line-height:1.5;
+  max-width:70ch;background:color-mix(in srgb,var(--win) 9%,var(--card));
+  border-left:3px solid var(--win)}
+.nw-upd.fix{background:color-mix(in srgb,var(--accent) 8%,var(--card));border-left-color:var(--accent)}
+.nw-upd a{color:var(--link);font-weight:600;text-decoration:none;white-space:nowrap}
 </style></head><body>
 <header class="site-header"><div class="wrap bar"><a class="brand" href="../">
 <span class="brand-text"><span class='wordmark'>Puckline <b>Press</b></span>
