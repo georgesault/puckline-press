@@ -716,6 +716,13 @@ h3.ar-head{font-size:26px}
 @media (max-width:640px){.trip{grid-template-columns:1fr}.trip-side{justify-content:flex-start}}
 /* an article on its own page */
 .art-page{max-width:820px;padding-top:28px;padding-bottom:56px}
+.game-page{padding-top:20px;padding-bottom:56px}
+.game-page .art-back{margin:0 0 16px}
+.game-own{margin:22px 0 0;text-align:right}
+.game-own a{font:700 14px var(--display);letter-spacing:.08em;text-transform:uppercase;
+  color:var(--muted);text-decoration:none}
+.game-own a:hover{color:var(--ink)}
+.nw-older{margin:18px 0;text-align:center;color:var(--muted)}
 .art-back a{font:700 14px var(--display);letter-spacing:.08em;text-transform:uppercase;
   color:var(--link);text-decoration:none}
 .art-logos{display:flex;gap:10px;margin:18px 0 8px}
@@ -775,6 +782,7 @@ h1.art-title{margin:10px 0 0;font:700 clamp(32px,5vw,52px)/1.05 var(--display);
 .tm-games .tl img{width:25px;height:25px;display:block}
 .tm-d{min-width:92px;color:var(--muted);font-size:13px}
 .tm-list small,.tm-games small{color:var(--muted)}
+.tm-gk{margin-left:auto}
 .tm-list.ij-card{background:none;border:0;padding:0}
 .tm-list.ij-card li{display:grid}
 .tm-links{margin:12px 0 0;font-size:14px}
