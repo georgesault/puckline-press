@@ -925,6 +925,69 @@ small.src{margin-left:6px;font-size:12px;color:var(--muted);white-space:nowrap}
   border-radius:16px;padding:16px 18px}
 .fm-h{margin:0 0 12px;font:700 13px var(--display);letter-spacing:.16em;
   text-transform:uppercase;color:var(--gold)}
+/* ---- the Slate Forecast (weather report): line under the nameplate, card -- */
+.np-forecast{display:inline-flex;align-items:center;gap:10px;margin:14px auto 0;
+  padding:8px 16px;border:1px solid rgba(255,255,255,.28);border-radius:999px;
+  background:rgba(8,17,29,.4);color:#DDE6F0;font:600 15px var(--display);
+  letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.np-forecast:hover{border-color:var(--gold)}
+.np-forecast .wx-i{color:#BFD7F2}
+.npf-k{color:#8FA3BC}
+.npf-n{font-size:20px;font-weight:700;color:#fff;letter-spacing:.02em}
+.npf-n small{font-size:12px;color:#8FA3BC;margin-left:1px}
+.npf-t{color:#fff}
+.np-forecast.wx-hot .npf-t,.np-forecast.wx-hot .wx-i{color:var(--gold)}
+.npf-rank{color:#8FA3BC;font-weight:500}
+.npf-rank::before,.npf-t::before{content:"·";margin-right:10px;color:#5E7590}
+@media (max-width:640px){.np-forecast{flex-wrap:wrap;justify-content:center;
+  gap:2px 8px;font-size:13px;padding:8px 14px;border-radius:14px}
+  .npf-rank{flex-basis:100%}.npf-rank::before{content:none}}
+.front-more>.wx{grid-column:1/-1}
+.wx-now{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.wx-big{display:flex;align-items:center;gap:12px;color:#BFD7F2}
+.wx-big.wx-hot{color:var(--gold)}
+.wx-num{font:800 64px/1 var(--display);color:#fff}
+.wx-num small{font-size:22px;color:#8FA3BC;margin-left:2px}
+.wx-say{flex:1 1 280px;min-width:0}
+.wx-tag{display:inline-block;font:800 30px/1.05 var(--display);text-transform:uppercase;
+  letter-spacing:.03em;color:#fff}
+.wx-tag.wx-hot{color:var(--gold)}
+.wx-line{margin:6px 0 4px;font-size:17px;color:#E4EBF3}
+.wx-what{margin:0;font-size:13px;color:#8FA3BC}
+.wx-h{margin:18px 0 8px;font:700 12px var(--display);letter-spacing:.16em;
+  text-transform:uppercase;color:#8FA3BC}
+.wx-games{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:6px}
+.wx-game{display:grid;grid-template-columns:minmax(0,1fr) auto auto 2.2em;align-items:center;
+  gap:8px;padding:8px 10px;border-radius:10px;border:1px solid rgba(255,255,255,.1);
+  background:rgba(255,255,255,.04);color:#DDE6F0;font:600 15px var(--display);
+  text-align:left;cursor:pointer}
+.wx-game:hover{border-color:var(--gold)}
+.wx-game .wx-teams{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wx-game .wx-teams img{vertical-align:middle;margin-right:4px}
+.wx-game .wx-i{color:#BFD7F2}
+.wx-game .wx-t{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#B9C6D6}
+.wx-game b{text-align:right;font-size:18px;color:#fff}
+.wx-game.wx-hot .wx-i,.wx-game.wx-hot b{color:var(--gold)}
+.wx-strips{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px}
+@media (max-width:1000px){.wx-strips{grid-template-columns:minmax(0,1fr)}}
+.wx-days{display:grid;grid-template-columns:repeat(7,minmax(74px,1fr));gap:6px;
+  overflow-x:auto;scrollbar-width:thin;padding-bottom:2px}
+.wx-day{display:flex;flex-direction:column;align-items:center;gap:3px;padding:9px 4px;
+  border-radius:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
+  text-align:center;color:#B9C6D6;font:600 12px var(--display);letter-spacing:.06em;
+  text-transform:uppercase}
+.wx-ahead .wx-day{border-style:dashed}
+.wx-day .wx-dow{color:#fff}
+.wx-day .wx-date{font-weight:500;color:#8FA3BC}
+.wx-day .wx-i{color:#BFD7F2;margin:3px 0}
+.wx-day b{font-size:22px;color:#fff;letter-spacing:0}
+.wx-day .wx-t{line-height:1.1;min-height:2.2em;display:flex;align-items:center}
+.wx-day .wx-g{font-weight:500;font-size:11px;color:#8FA3BC;text-transform:none;letter-spacing:0}
+.wx-day.wx-hot .wx-i,.wx-day.wx-hot b{color:var(--gold)}
+.wx-note{margin:8px 0 0;font-size:12px;color:#8FA3BC}
+@media (max-width:600px){.wx-num{font-size:52px}.wx-tag{font-size:26px}
+  .wx-games{grid-template-columns:minmax(0,1fr)}
+  .wx-now{gap:12px}}
 .fm-scores{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
 .fm-scores>.fm-score{flex:0 1 calc(50% - 4px);min-width:0}
 @media (max-width:420px){.fm-scores>.fm-score{flex-basis:100%}}
@@ -1008,6 +1071,8 @@ main .off-table td{border-top-color:var(--line)}
 .closeness{margin:10px 0 0;font:600 15px/1 'Barlow Condensed',sans-serif;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
 .closeness b{display:inline-block;margin-left:6px;padding:3px 8px;border-radius:4px;background:var(--soft);color:var(--ink);font-weight:700}
 .closeness.hot b{background:var(--gold);color:#0E1B2C}
+.closeness .cl-t{margin-left:6px;color:var(--ink)}
+.closeness small{font-size:.7em;opacity:.7;margin-left:1px}
 .odds-row th .tl{display:inline-block;vertical-align:middle;margin-right:6px}
 @media (max-width:1100px){.odds-row{grid-template-columns:minmax(0,1fr)}}
 .rs-note{margin-top:10px}
