@@ -1112,7 +1112,7 @@ main .off-table td{border-top-color:var(--line)}
 /* ---- team logos: the same visible size for every team ----------------
    NHL's logo files share one 960x640 frame but the artwork inside varies
    (Rangers small, Kings wide), so each is scaled to the same visible size
-   and centred. The box (and the layout) doesn't change. */
+   and centered. The box (and the layout) doesn't change. */
 img[src*="/ANA_"]{transform:scale(1.095) translate(0.0%,0.1%)}
 img[src*="/BOS_"]{transform:scale(1.083) translate(0.1%,0.1%)}
 img[src*="/BUF_"]{transform:scale(1.079) translate(0.0%,0.0%)}
@@ -1583,7 +1583,7 @@ function dress(table){
   });
 }
 
-// Phones: the standings' chances tables put Cup odds (the coloured column)
+// Phones: the standings' chances tables put Cup odds (the colored column)
 // right after the team, so it isn't off the edge of the screen.
 function cupFirst(table){
   if(!window.matchMedia('(max-width:600px)').matches || !table.closest('#standings')) return;
@@ -1673,9 +1673,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
 // ---- Strength of schedule chart ------------------------------------------
 // One line per selected team over its season (x = game number, y = +5 very
-// easy .. -5 very hard). Up to 8 colours in fixed order; past 8 a line style
-// joins the colour (solid, dashed, dotted, dash-dot), so 32 stay distinct.
-// A team keeps its colour and style while it is selected.
+// easy .. -5 very hard). Up to 8 colors in fixed order; past 8 a line style
+// joins the color (solid, dashed, dotted, dash-dot), so 32 stay distinct.
+// A team keeps its color and style while it is selected.
 (function(){
   var DASH = ['', '7 5', '2 4', '10 4 2 4'];
   var AHEAD = ['Next', '2nd', '3rd', '4th', '5th'];
@@ -1685,7 +1685,7 @@ document.addEventListener('DOMContentLoaded', function(){
   function isolated(){ return lastN() > 0 || mode === 'rest' || mode === 'next5'; }
 
   function slotOf(team){ return picked.indexOf(team); }
-  function colour(i){ return 'var(--s' + (i % 8 + 1) + ')'; }
+  function color(i){ return 'var(--s' + (i % 8 + 1) + ')'; }
   function dash(i){ return DASH[Math.floor(i / 8) % DASH.length]; }
 
   function series(team){
@@ -1790,7 +1790,7 @@ document.addEventListener('DOMContentLoaded', function(){
           return (k ? 'L' : 'M') + x(p.n).toFixed(1) + ' ' + y(p.v).toFixed(1);
         }).join(' ');
       };
-      var common = {fill: 'none', stroke: colour(i), 'stroke-width': 2,
+      var common = {fill: 'none', stroke: color(i), 'stroke-width': 2,
                     'stroke-linejoin': 'round', 'stroke-linecap': 'round'};
       if(dash(i)) common['stroke-dasharray'] = dash(i);
       if(split > 0){
@@ -1805,7 +1805,7 @@ document.addEventListener('DOMContentLoaded', function(){
     var cross = el('line', {y1: m.t, y2: H - m.b, class: 'sos-cross',
                             visibility: 'hidden'}, svg);
     var dots = picked.map(function(team, i){
-      return el('circle', {r: 4.5, fill: colour(i), class: 'sos-dot',
+      return el('circle', {r: 4.5, fill: color(i), class: 'sos-dot',
                            visibility: 'hidden'}, svg);
     });
     var tip = document.createElement('div'); tip.className = 'sos-tip';
@@ -1869,7 +1869,7 @@ document.addEventListener('DOMContentLoaded', function(){
       var b = document.createElement('button'); b.className = 'sos-chip';
       b.type = 'button'; b.title = 'Remove ' + team;
       var s = el('svg', {width: 26, height: 10, 'aria-hidden': 'true'});
-      var ln = el('line', {x1: 1, x2: 25, y1: 5, y2: 5, stroke: colour(i),
+      var ln = el('line', {x1: 1, x2: 25, y1: 5, y2: 5, stroke: color(i),
                            'stroke-width': 3, 'stroke-linecap': 'round'}, s);
       if(dash(i)) ln.setAttribute('stroke-dasharray', dash(i));
       b.appendChild(s);
@@ -1882,7 +1882,7 @@ document.addEventListener('DOMContentLoaded', function(){
     document.querySelectorAll('.sos-team').forEach(function(btn){
       var i = slotOf(btn.dataset.team);
       btn.setAttribute('aria-pressed', i >= 0);
-      btn.style.setProperty('--pick', i >= 0 ? colour(i) : 'transparent');
+      btn.style.setProperty('--pick', i >= 0 ? color(i) : 'transparent');
     });
   }
 
@@ -2993,7 +2993,7 @@ document.addEventListener('DOMContentLoaded', function(){
 </div></header>
 <main class="wrap game-page"><p class="art-back"><a href="../editions/2026-11-06.html#game-2026020262">&larr;
 The Friday edition: every game, standings, news and Puckline's picks</a></p>
-<section class="tab active" id="game-2026020262"><div class='live' data-live='{&quot;id&quot;:2026020262,&quot;start&quot;:&quot;2026-11-07T00:00:00+00:00&quot;,&quot;away&quot;:&quot;CBJ&quot;,&quot;home&quot;:&quot;BUF&quot;,&quot;names&quot;:{&quot;CBJ&quot;:&quot;Columbus Blue Jackets&quot;,&quot;BUF&quot;:&quot;Buffalo Sabres&quot;},&quot;odds&quot;:[{&quot;side&quot;:&quot;CBJ&quot;,&quot;market&quot;:&quot;+1.5&quot;,&quot;price&quot;:-172},{&quot;side&quot;:&quot;BUF&quot;,&quot;market&quot;:&quot;+1.5&quot;,&quot;price&quot;:-550},{&quot;side&quot;:&quot;CBJ&quot;,&quot;market&quot;:&quot;ML&quot;,&quot;price&quot;:146},{&quot;side&quot;:&quot;BUF&quot;,&quot;market&quot;:&quot;ML&quot;,&quot;price&quot;:-176},{&quot;side&quot;:&quot;CBJ&quot;,&quot;market&quot;:&quot;-1.5&quot;,&quot;price&quot;:340},{&quot;side&quot;:&quot;BUF&quot;,&quot;market&quot;:&quot;-1.5&quot;,&quot;price&quot;:140}],&quot;picks&quot;:[]}'><div class='live-head' hidden></div><div class='live-btns' role='tablist' hidden><button class='live-btn on' data-pane='preview'>Preview</button><button class='live-btn' data-pane='pbp'>Play-by-play</button><button class='live-btn' data-pane='stats'>In-game stats</button></div><div class='live-pane' data-pane='preview'><h2 class="sr-only">CBJ @ BUF · 7:00 PM ET</h2>
+<section class="tab active" id="game-2026020262"><div class='live' data-live='{&quot;id&quot;:2026020262,&quot;start&quot;:&quot;2026-11-07T00:00:00+00:00&quot;,&quot;away&quot;:&quot;CBJ&quot;,&quot;home&quot;:&quot;BUF&quot;,&quot;names&quot;:{&quot;CBJ&quot;:&quot;Columbus Blue Jackets&quot;,&quot;BUF&quot;:&quot;Buffalo Sabres&quot;},&quot;odds&quot;:[{&quot;side&quot;:&quot;CBJ&quot;,&quot;market&quot;:&quot;+1.5&quot;,&quot;price&quot;:-178},{&quot;side&quot;:&quot;BUF&quot;,&quot;market&quot;:&quot;+1.5&quot;,&quot;price&quot;:-550},{&quot;side&quot;:&quot;CBJ&quot;,&quot;market&quot;:&quot;ML&quot;,&quot;price&quot;:146},{&quot;side&quot;:&quot;BUF&quot;,&quot;market&quot;:&quot;ML&quot;,&quot;price&quot;:-176},{&quot;side&quot;:&quot;CBJ&quot;,&quot;market&quot;:&quot;-1.5&quot;,&quot;price&quot;:340},{&quot;side&quot;:&quot;BUF&quot;,&quot;market&quot;:&quot;-1.5&quot;,&quot;price&quot;:144}],&quot;picks&quot;:[]}'><div class='live-head' hidden></div><div class='live-btns' role='tablist' hidden><button class='live-btn on' data-pane='preview'>Preview</button><button class='live-btn' data-pane='pbp'>Play-by-play</button><button class='live-btn' data-pane='stats'>In-game stats</button></div><div class='live-pane' data-pane='preview'><h2 class="sr-only">CBJ @ BUF · 7:00 PM ET</h2>
 
 <div class='matchup-hero'><div class='mh-team away'><a class='tm-link' href='#team-CBJ'><picture class='tl big'><source media='(prefers-color-scheme: dark)' srcset='https://assets.nhle.com/logos/nhl/svg/CBJ_dark.svg'><img src='https://assets.nhle.com/logos/nhl/svg/CBJ_light.svg' alt='CBJ' width='84' height='84'></picture></a><div class='mh-name'><a class='tm-link mh-city' href='#team-CBJ'>Columbus Blue Jackets</a><span class='mh-abbr'>CBJ</span><span class='mh-rec'>7-7-0 · 14 PTS</span><span class='mh-ml'>ML +146</span></div></div><div class='mh-mid'><span class='mh-at'>@</span><span class='mh-time'>7:00 PM ET</span><span class='mh-venue'>Fri Nov 6 · KeyBank Center</span><div class='mh-odds'><span>CBJ +146</span><span class='mh-sep'>ML</span><span>BUF -176</span></div></div><div class='mh-team home'><a class='tm-link' href='#team-BUF'><picture class='tl big'><source media='(prefers-color-scheme: dark)' srcset='https://assets.nhle.com/logos/nhl/svg/BUF_dark.svg'><img src='https://assets.nhle.com/logos/nhl/svg/BUF_light.svg' alt='BUF' width='84' height='84'></picture></a><div class='mh-name'><a class='tm-link mh-city' href='#team-BUF'>Buffalo Sabres</a><span class='mh-abbr'>BUF</span><span class='mh-rec'>7-5-3 · 17 PTS</span><span class='mh-ml'>ML -176</span></div></div></div>
 
@@ -3017,7 +3017,7 @@ The Friday edition: every game, standings, news and Puckline's picks</a></p>
 <tbody>
 <tr>
 <td>+1.5</td>
-<td style="text-align: right;">-172</td>
+<td style="text-align: right;">-178</td>
 <td style="text-align: right;">-550</td>
 </tr>
 <tr>
@@ -3028,7 +3028,7 @@ The Friday edition: every game, standings, news and Puckline's picks</a></p>
 <tr>
 <td>-1.5</td>
 <td style="text-align: right;">+340</td>
-<td style="text-align: right;">+140</td>
+<td style="text-align: right;">+144</td>
 </tr>
 <tr>
 <td>REG</td>
@@ -3037,7 +3037,7 @@ The Friday edition: every game, standings, news and Puckline's picks</a></p>
 </tr>
 <tr>
 <td>Tie after 60</td>
-<td style="text-align: right;">+340</td>
+<td style="text-align: right;">+330</td>
 <td style="text-align: right;"></td>
 </tr>
 </tbody>
@@ -3053,8 +3053,8 @@ The Friday edition: every game, standings, news and Puckline's picks</a></p>
 <tbody>
 <tr>
 <td>6.5 goals</td>
-<td style="text-align: right;">-102</td>
-<td style="text-align: right;">-120</td>
+<td style="text-align: right;">+100</td>
+<td style="text-align: right;">-122</td>
 </tr>
 </tbody>
 </table>
