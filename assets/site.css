@@ -1104,7 +1104,7 @@ main .off-table td{border-top-color:var(--line)}
 /* ---- team logos: the same visible size for every team ----------------
    NHL's logo files share one 960x640 frame but the artwork inside varies
    (Rangers small, Kings wide), so each is scaled to the same visible size
-   and centred. The box (and the layout) doesn't change. */
+   and centered. The box (and the layout) doesn't change. */
 img[src*="/ANA_"]{transform:scale(1.095) translate(0.0%,0.1%)}
 img[src*="/BOS_"]{transform:scale(1.083) translate(0.1%,0.1%)}
 img[src*="/BUF_"]{transform:scale(1.079) translate(0.0%,0.0%)}
